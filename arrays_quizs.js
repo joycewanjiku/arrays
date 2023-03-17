@@ -38,15 +38,23 @@ console.log(arr3);
             });
             console.log(fruits)
             
-            const four=arry.sort()
-            const x=y. reverse
-            let[a, ...b]=y;
+            const four=arr.sort()
+            const x=four.reverse()
+            let[a, ...b]=four;
             console.log(b)
             
             
 // Write a JS script to search for the following word in the array.///
 // 4
 // If the word is present, console it else console "the search word was not found"/
-//let arr5 = ["the", "way", "x", 4, 23];
+let arr5 = ["the", "way", "x", 4, 23];
+if(arr5.includes("4")){
+    console.log(4)
+}else{
+    console.log("The search word was not found")
+}
+
+
 // Write a JS script to sort the following string
-// /'let word = "lufituaeb"
+let word = "lufituaeb"
+let word2 = word.split("").sort().join()
