@@ -8,7 +8,7 @@ console.log(array);
 
 // arr2 = [true, "green", "where",12,56]/
 let arrayTwo=[true,"green","where",12,56,];
-let arry= arrayTwo.slice(-1);
+let arry= arrayTwo[arrayTwo.length-1];
 console.log(arry)
 // Write a JS program that will join the following array elements into a string
 // myPets = ["Cow", "Python", "Snake", "Dog"];
@@ -19,8 +19,9 @@ console.log(myPets.join());
 // Write a JS script to sort the following array items
 // var arr3 = [ -5, 9, 5, 3, 2, -3, 6, 8, 4, 1 ];//
 var arr3 = [ -5, 9, 5, 3, 2, -3, 6, 8, 4, 1 ];
-arr3.sort();
-console.log(arr3);
+
+console.log(arr3.sort());
+console.log(arr3.reverse());
 
 
 // Write a program to remove duplicates from the following array.
@@ -58,3 +59,16 @@ if(arr5.includes("4")){
 // Write a JS script to sort the following string
 let word = "lufituaeb"
 let word2 = word.split("").sort().join()
+
+// Given an arry num of numbers and a target,return the index is found in the array else return null
+
+function binary(num,target){
+    let left=0
+    let right =num.length -1;
+    while(left<= right){
+        let middle =math.floor((left+ right)/2)
+        if(num[middle] ===target){
+            return middle;
+        }
+t
+
