@@ -45,6 +45,7 @@ console.log(arr);
 function  array2(arr2,target2){ 
 let left=0;
 let right=arr2.length -1;
+
 while(left<=right){
     let middle=Math.floor((left+right)/2);
     if (arr2[middle]=== target2){
