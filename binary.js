@@ -4,76 +4,35 @@
 //  If the target is not found, return null
 // let num = [45,12,6,89,2,5]
 // let target = 6
-var num1 =[45,12,6,89,2,5];
-var target= 6;
-function binary(arr,target){
-    let leftIndex = 0;
-    let rightIndex = arr.length-1;
-    console.log("leftx",leftIndex);
-    console.log("righty",rightIndex);
-    while(leftIndex <= rightIndex){
-        console.log("leftx",leftIndex);
-        console.log("righty",rightIndex);
-       let middle = Math.floor((leftIndex+rightIndex)/2);
-       if (arr[middle] === target){
+function  binary(num1,target1){ 
+let left=0;
+let right=num1.length -1;
+while(left<=right){
+    let middle=Math.floor((left+right)/2);
+    if (num1[middle]=== target1){
         return middle;
-       }
-       else if(arr[middle]>target){
-        rightIndex = middle - 1
-       }
-       else{
-        leftIndex = middle + 1
-       }
     }
-    return null
+    else if(num1[middle]< target1){
+        left = middle+1;
     }
-    function mergeSort(arr) {
-        if (arr.length <= 1) {
-          return arr;
-        }
-        let middle = Math.floor(arr.length / 2);
-        let leftIndex = arr.slice(0, middle);
-        let rightIndex = arr.slice(middle);
-        return merge(mergeSort(leftIndex), mergeSort(rightIndex));
-      }
-    let num = [45,12,6,89,2,5];
-    let target = 6;
-    console.log(binary(num,target));
-    
+    else{
+        right=middle-1;
+    }
 
+}
+}
+
+let num1= [45,12,6,89,2,5]
+ let target1 = 6;
+ console.log(binary(num1,target1))
 
 
 
 // Given an unsorted array of numbers return the sorted array in descending order
-// // let arr=[123,89,5,23,9,56]
+let arr=[123,89,5,23,9,56]
+arr.sort((a,b)=>b-a);
+console.log(arr);
 
-// let array=[123,89,5,23,9,56]
-function MergeSort(arry){
-    if(arry.length<=1){
-        return arry;
-    }
-    let middle=Math.floor(arry.length/2);array
-    let Left=arry.slice(0,middle);
-    let right=arry.slice(middle);
-    return Merge(MergeSort(Left).MergeSort(right))
-
-}
-
-function merge(left, right) {
-  let result = [];
-  while (left.length && right.length) {
-    if (left[0] < right[0]) {
-      result.push(left.shift());
-    } else {
-      result.push(right.shift());
-    }
-  }
-  return [result, left,right];
-}
-let target2 = 34;
-let arr2 = [1, 4, 78, 2, 67, 3];
-let index = findTarget(arr2, target);
-console.log(index)
 
 
 
@@ -81,45 +40,28 @@ console.log(index)
 
 
 // // Given the following array, search for the following target
-// // let target = 34
-// // let arr2 = [1,4,78,2,67,3];
-function findTarget(arr, target) {
-    arr = mergeSort(arr);
-    let left = 0;
-    let right = arr.length - 1;
-    while (left <= right) {
-      const mid = Math.floor((left + right) / 2);
-      if (arr[mid] === target) {
-        return mid;
-      } else if (arr[mid] < target) {
-        left = mid + 1;
-      } else {
-        right = mid - 1;
-      }
+ 
+
+function  array2(arr2,target2){ 
+let left=0;
+let right=arr2.length -1;
+while(left<=right){
+    let middle=Math.floor((left+right)/2);
+    if (arr2[middle]=== target2){
+        return middle;
     }
-    return null;
-  }
-  function mergeSort(arr) {
-    if (arr.length <= 1) {
-      return arr;
+    else if(arr2[middle]< target2){
+        left = middle+1;
     }
-    let mid = Math.floor(arr.length / 2);
-    let left = arr.slice(0, mid);
-    let right = arr.slice(mid);
-    return merge(mergeSort(left), mergeSort(right));
-  }
-  function merge(left, right) {
-    let result = [];
-    while (left.length && right.length) {
-      if (left[0] < right[0]) {
-        result.push(left.shift());
-      } else {
-        result.push(right.shift());
-      }
+    else{
+        right=middle-1;
     }
-    return [result, left, right];
-  }
-  let targt = 34;
-  let arry = [1, 4, 78, 2, 67, 3];
-  let array = findTarget(arr2, target);
-  console.log(index);
+
+}
+return null
+}
+
+ let target = 34
+  let arr2 = [1,4,78,2,67,3];
+ console.log(array2(arr2,target1))
+
